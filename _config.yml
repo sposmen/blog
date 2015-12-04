@@ -1,3 +1,5 @@
+timezone : America/Bogota
+
 # The following configuration items need set up specifically for your site
 #
 # name - This is the site name. The site name is used in the title of
@@ -23,12 +25,12 @@
 # url : https://thedereck.github.io
 # email : thedereck@thedereck.com
 # author : Dereck Curry
-name : gh-pages-blog
-brand : gh-pages-blog
-description : The More Or Less Official GH-Pages-Blog GitHub Page (And Blog)
-url : https://thedereck.github.io/gh-pages-blog
-email : thedereck@thedereck.com
-author: Dereck Curry
+name : Sposmen's Blog
+brand : Sposmen's Blog
+description : General Sposmen Thoughts
+url : http://sposmen.github.io/blog
+email : sposmen@gmail.com
+author: Jaime Giraldo (Sposmen)
 
 
 # The following is a list of files to exclude from inclusion in the
@@ -538,7 +540,7 @@ rss :
 #   show_comment_count : false
 disqus :
   enabled : true
-  shortname : ghpagesblog
+  shortname : sposmen
   show_comment_count : true
 
 
@@ -560,7 +562,7 @@ disqus :
 #     enabled : true
 #     tracking_id : UA-1234567
 analytics :
-  enabled : true
+  enabled : false
   google_analytics :
-    enabled : true
+    enabled : false
     tracking_id : UA-7954274-6
