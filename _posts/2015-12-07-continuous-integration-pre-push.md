@@ -3,6 +3,7 @@ layout : post
 title : "Continuous Integration: Start ensuring from repo pushes"
 subtitle : Initial bug insert prevention inside main repository.
 category : tech
+author : sposmen
 tags :
   - continuous integration
   - tdd
@@ -11,11 +12,12 @@ tags :
   - pre push
 ---
 
-Last decade have been an increasingly change in software development process. One of them is the good known Agile. 
+Last decade have been an increasingly change in software development process. One of them is the well known Agile. 
 And, complementing its principles, TDD and BDD increases its force combined with a good automation process with
-Continuous Integration. Here is where there are always helping tips to the process in the develop side.
+Continuous Integration. Here is where always are helping tips to enhance the process in the develop side.
 
-The first step, where a developer combine its own code with others, is through pushes to the unified repository.
+The first touch, in the continuous integration process, where a developer combine its own code with others,
+is through pushes to the unified repository.
 
 Main purpose of this post is to give readers an initial bug insert prevention inside main repository.
 

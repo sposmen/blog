@@ -42,7 +42,11 @@
 					{% endif %}
 					Authored by 
 					{% if page.author %}
-						{{ page.author }}.
+						{% if site.data.people[page.author] %}
+							{{ site.data.people[page.author].name }}.
+						{% else %}
+							{{ page.author }}.
+						{% endif %}
 					{% else %}
 						{{ site.author }}.
 					{% endif %}
