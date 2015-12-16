@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "Continuous Integration: Start ensuring from repo pushes"
+title : "Continuous Integration: Start from repo pushes"
 subtitle : Initial bug insert prevention inside main repository.
 category : tech
 author : sposmen
@@ -9,40 +9,37 @@ tags :
   - tdd
   - bdd
   - git
+  - hooks
   - pre push
 ---
 
-Last decade have been an increasingly change in software development process. One of them is the well known Agile. 
-And, complementing its principles, TDD and BDD increases its force combined with a good automation process with
-Continuous Integration. Here is where always are helping tips to enhance the process in the develop side.
+In the last decade, there have been an increasingly change in software development processes. One of them is the well known Agile, and it's complementing technical practices, like, TDD and BDD which combined creates a good automation process and supports 
+Continuous Integration. Here we can find lots of helping tips to enhance the process from the developer side.
 
-The first touch, in the continuous integration process, where a developer combine its own code with others,
-is through pushes to the unified repository.
+The first contact in the continuous integration process is where a developer combine its own code with the code of others,through pushes to the unified repository.
 
-Main purpose of this post is to give readers an initial bug insert prevention inside main repository.
+The main purpose of this post is to give readers an initial tip to prevent bug insertions to  the main repository, by using the available hooks from the control version system. We'll use git in this article as an example.
 
-On this case it will be used GIT for its hooks structure.
+
 
 ### Initial step: Good TDD/BDD scripts
 
 As good practice in the Agile process, TDD and BDD could be good players. This is the initial step on this process where a developer
-generates the code to validate its created code. Usually it is ran through a command line. The important thing here is that it must
-return to command line with the correspondent status, where _0_ is satisfactory and _1_ or others are being as un-success executions.
-
-To validate how it goes, the developer could run `echo $?` immediate after the test was run in bash terminal. This command
-shows the test script result.
+writes it's acceptance and unit tests to validate his created code. This is usually ran through a command line. The important thing here is that it must
+return to command line with the correspondent status, where _0_ is satisfactory and _1_ or others are being as unsuccessful execution.
+'
+To validate how it goes, the developer could run `echo $?` immediate after the test was run in bash terminal. This command shows the test script result.
 
 
 ### Second step: GIT pre-push hook
 
-GIT have scripts hooks that help developers, or development process, to automate certain requirements. `pre-push` is the
-above mentioned because it is the tangent point between the developer and the repository, and there is where could be
-prevented (as initial point) some bugs being integrated within an application.
+GIT have scripts hooks that help developers to automate certain requirements in specific phases of the version control process. `pre-push` is the
+hook that it's the tangent point between the developer and the unified repository, and this is where we can prevent 
+some bugs from being integrated into the application.
  
-The location of the script is `PROJECT_GIT_ROOT\.git\hooks\pre-push` and each time a developer start a GIT repository
-there is created an example script called `pre-push.sample`.
+The location of the script is `PROJECT_GIT_ROOT\.git\hooks\pre-push` and each time a developer start a GIT repository, an example script called `pre-push.sample` is created as a template.
 
-Here is an example of this script helping to avoid bug insertions
+Here is an example on how to use this script to help  avoid bug insertions on a ruby project:
 
 {% highlight bash %}
 #!/bin/sh
@@ -59,6 +56,6 @@ exit $?
 
 ### Final steps
 
-- Check the script with `git push` command. It could be easy to check emulating _0_ and _1_ from the pre-push script.
+- Check the script with `git push` command. You can do this  easily by emulating _0_ and _1_ from the pre-push script.
 
-- Finally, the developer must play accordingly to his particular case.
+- The developer must adjust the script accordingly to his particular case (by running it's language build tools and tests).
