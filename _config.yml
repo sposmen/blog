@@ -1,4 +1,6 @@
 timezone : America/Bogota
+encoding : UTF-8
+
 
 # The following configuration items need set up specifically for your site
 #
@@ -29,6 +31,7 @@ name : Sposmen's Blog
 brand : Sposmen's Blog
 description : General Sposmen Thoughts
 url : http://blog.jaime-giraldo.com/
+#url : http://sposmen.github.io/blog
 email : sposmen@gmail.com
 author: Jaime Giraldo (Sposmen)
 
@@ -41,6 +44,7 @@ exclude : [ README.md , version.txt ]
 # Replace the number with the default number of blot posts you want on each
 # page. A value of 0 will indicate that you don't want to paginate, and all
 # blog posts will be on the index page.
+gems: [jekyll-paginate]
 paginate : 10
 
 
@@ -287,22 +291,22 @@ social_links :
       enabled : true
       name : GitHub
       font_awesome_icon : icon-github-alt
-      url : https://github.com/TheDereck
+      url : https://github.com/Sposmen
     - link :
       enabled : true
       name: Google+
       font_awesome_icon : icon-google-plus
-      url : https://plus.google.com/109660251296662910676?rel=author
+      url : https://plus.google.com/+JaimeGiraldo/about
     - link :
       enabled : true
       name : Linkedin
       font_awesome_icon : icon-linkedin
-      url : http://www.linkedin.com/in/dereckcurry
+      url : https://www.linkedin.com/in/jaimegiraldo
     - link :
       enabled : true
       name : Twitter
       font_awesome_icon : icon-twitter
-      url : https://www.twitter.com/DereckCurry
+      url : https://www.twitter.com/sposmen
 
 
 # These are a list of GitHub projects that the blog owner would like to
@@ -325,12 +329,12 @@ social_links :
 #   - project :
 #     name : gh-pages-blog
 #     url : https://github.com/thedereck/gh-pages-blog
-github_projects :
-  header : Fork Me!
-  projects :
-  - project :
-    name : gh-pages-blog
-    url : https://github.com/thedereck/gh-pages-blog
+#github_projects :
+#  header : Fork Me!
+#  projects :
+#  - project :
+#    name : gh-pages-blog
+#    url : https://github.com/thedereck/gh-pages-blog
 
 
 # These are links to other websites outside of the blog that are not part of
@@ -358,7 +362,7 @@ external_links :
   header : Great gh-pages-blog Sites!
   links :
     - link :
-      name : The Dereck
+      name : Thanks to "The Dereck"
       url: https://thedereck.github.io
 
 
